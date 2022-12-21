@@ -1,0 +1,39 @@
+.figure{
+    display: grid;
+    grid-template: ifr/ifr;
+    grid-template-areas: "img";
+    width: 500px;
+    height: 400px;
+    margin: 100px auto;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-area: img;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-area: img;
+}
+.figure::after{
+    content: "Somos Banco Soluciones Web una forma sencilla en uno dos clicks";
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 131, 199, 0.66);
+    color:#fff;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    clip-path: circle(0 at top right);
+    transition: clip-path .4s;
+}
+.figure:hover::after{
+    clip-path: circle(150% at top right);
+}
